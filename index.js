@@ -1,7 +1,9 @@
+var Tip = require('tip');
+
 module.exports = function(messages) {
   var tips = {};
 
-  messages.on('show', function(el, name, content){
+  messages.on('show', function(el, name, message){
     var tip = new Tip({
       target: el,
       content: message,
@@ -18,10 +20,14 @@ module.exports = function(messages) {
     tips[name].setContent(content);
   });
 
-  messages.on('hide', function(name){
+  messages.on('hide', function(el, name){
+
+    console.log('hide');
+    console.log(el);
+    console.log(el.classList);
+
     tips[name].hide();
     delete tips[name];
     el.classList.remove('is-invalid');
   });
-
 };
