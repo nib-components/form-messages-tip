@@ -1,0 +1,16 @@
+{
+  "name": "form-messages-tip",
+  "repo": "nib-components/form-messages-tip",
+  "description": "Tip display for the form messages component",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "nib-components/tip": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
