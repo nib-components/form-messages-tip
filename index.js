@@ -21,11 +21,6 @@ module.exports = function(messages) {
   });
 
   messages.on('hide', function(el, name){
-
-    console.log('hide');
-    console.log(el);
-    console.log(el.classList);
-
     tips[name].hide();
     delete tips[name];
     el.classList.remove('is-invalid');
